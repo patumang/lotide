@@ -9,7 +9,7 @@ const without = function(sourceArray, itemsToRemove) {
       requiredItems.push(item);
     }
   }
-  console.log(requiredItems);
+  console.log(`[${sourceArray}] without [${itemsToRemove}]: [${requiredItems}]`);
 
 };
 
@@ -41,35 +41,32 @@ const eqArrays = function(arr1, arr2) {
 
 };
 
-//function to check actual and expected are same or not
-const assertEqual = function(actual, expected) {
+//function to show assert arrays are equal or not
+const assertArraysEqual = function(actual, expected) {
   //store emoji from decimal codes
   const emojiPassed = String.fromCodePoint(128512);
   const emojiFailed = String.fromCodePoint(128549);
 
-  //check if both arguments are same or not and log appropriate result
-  if (actual === expected)
-    console.log(`${emojiPassed} Assertion Passed: ${actual} === ${expected}`);
+  //check if both arrays are equal or not and log appropriate result
+  const equalArrays = eqArrays(actual, expected);
+  if (equalArrays)
+    console.log(`${emojiPassed} Assertion Passed: [${actual}] === [${expected}]`);
   else
-    console.log(`${emojiFailed} Assertion Failed: ${actual} !== ${expected}`);
-};
-
-//function to make a call to assertEqual() and eqArrays() functions
-const assertArraysEqual = function(arr1, arr2) {
-  const equalArrays = eqArrays(arr1, arr2);
-  assertEqual(equalArrays, true);
+    console.log(`${emojiFailed} Assertion Failed: [${actual}] !== [${expected}]`);
 };
 
 // TEST CODE
 without([1, 2, 3], [1]); // => [2, 3]
 without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
-without([1, 2, 3], [4]);
+
+//ADDITIONAL TEST CASES
+/* without([1, 2, 3], [4]);
 without([1, 2, 3], [1, 2, 3]);
 without([1], ['1']);
 without([1, 2, 3], [true]);
 without([1, 2, 3], [undefined]);
 without([1, 2, 3], []);
-without([], [1]);
+without([], [1]); */
 
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case
