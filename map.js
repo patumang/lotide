@@ -40,13 +40,18 @@ const assertArraysEqual = function(actual, expected) {
     console.log(`${emojiFailed}${emojiFailed}${emojiFailed} Assertion Failed: [${actual}] !== [${expected}]`);
 };
 
+//create map function to modify elemets of give array by using callback function
 const map = function(array, callback) {
+  //store empty array to results
   const results = [];
 
+  //iterate through each item and call a callback function
   for (let item of array) {
+    //append callback returned value in results array
     results.push(callback(item));
   }
 
+  //return results array
   return results;
 };
 
