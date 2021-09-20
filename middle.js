@@ -2,7 +2,7 @@
 const middle = function(myArray) {
   //if the input argument is not an array, return function with error message
   if (!Array.isArray(myArray))
-    return "Input is not an Array";
+    return undefined;
 
   const myArrayLength = myArray.length;
 
