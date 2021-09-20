@@ -1,4 +1,4 @@
-const _ = require('./index');
+const eqArrays = require('./eqArrays');
 
 //function to show assert arrays are equal or not
 const assertArraysEqual = function(actual, expected) {
@@ -7,7 +7,7 @@ const assertArraysEqual = function(actual, expected) {
   const emojiFailed = String.fromCodePoint(128125);
 
   //check if both arrays are equal or not and log appropriate result
-  const equalArrays = _.eqArrays(actual, expected);
+  const equalArrays = eqArrays(actual, expected);
   if (equalArrays)
     console.log(`${emojiPassed}${emojiPassed}${emojiPassed} Assertion Passed: [${actual}] === [${expected}]`);
   else
