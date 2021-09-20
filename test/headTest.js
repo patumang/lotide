@@ -1,5 +1,4 @@
 const assert = require('chai').assert;
-//const assertEqual = require('../assertEqual');
 const head = require('../head');
 
 describe("#head", () => {
@@ -18,6 +17,14 @@ describe("#head", () => {
 
   it("returns 'Hello' for ['Hello', 'Lighthouse', 'Labs']", () => {
     assert.strictEqual(head(["Hello", "Lighthouse", "Labs"]), 'Hello');
+  });
+
+  it("returns undefined for []", () => {
+    assert.strictEqual(head([]), undefined);
+  });
+
+  it("returns undefined for 'string not an array'", () => {
+    assert.deepEqual(head('string not an array'), undefined);
   });
 
 });
