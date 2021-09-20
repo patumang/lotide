@@ -10,8 +10,7 @@ const tail = function(inputArray) {
   if (inputArray.length <= 1)
     return [];
     
-  console.log("tail:");
-  console.log(inputArray.slice(1));
+  return inputArray.slice(1);
 };
 
 module.exports = tail;
