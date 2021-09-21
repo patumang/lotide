@@ -2,13 +2,13 @@
 const assertEqual = function(actual, expected) {
   //store emoji from decimal codes
   const emojiPassed = String.fromCodePoint(128512);
-  const emojiFailed = String.fromCodePoint(128549);
+  const emojiFailed = String.fromCodePoint(128125);
 
   //check if both arguments are same or not and log appropriate result
   if (actual === expected)
-    console.log(`${emojiPassed} Assertion Passed: ${actual} === ${expected}`);
+    console.log(`${emojiPassed}${emojiPassed}${emojiPassed} Assertion Passed: ${actual} === ${expected}`);
   else
-    console.log(`${emojiFailed} Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`${emojiFailed}${emojiFailed}${emojiFailed} Assertion Failed: ${actual} !== ${expected}`);
 };
 
 //function to count occurrances of characters in a string

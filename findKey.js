@@ -6,9 +6,9 @@ const assertEqual = function(actual, expected) {
 
   //check if both arguments are same or not and log appropriate result
   if (actual === expected)
-    console.log(`${emojiPassed} Assertion Passed: ${actual} === ${expected}`);
+    console.log(`${emojiPassed}${emojiPassed}${emojiPassed} Assertion Passed: ${actual} === ${expected}`);
   else
-    console.log(`${emojiFailed} Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`${emojiFailed}${emojiFailed}${emojiFailed} Assertion Failed: ${actual} !== ${expected}`);
 };
 
 //function findKey to find key for a required condition by callback
